@@ -1,6 +1,6 @@
 # nuxt-blog
 
-> My super Nuxt.js project
+> Nuxt.js and Tailwind.css
 
 ## Build Setup
 
