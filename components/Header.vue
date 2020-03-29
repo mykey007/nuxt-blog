@@ -25,6 +25,7 @@
             <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="text-lg sm:flex-grow items-end flex flex-row justify-end">
                 <nuxt-link to="/" class="m-5 text-white hover:underline">Home</nuxt-link>
+                <nuxt-link to="/posts" class="m-5 text-white hover:underline">Posts</nuxt-link>
                 <nuxt-link to="/users" class="m-5 text-white hover:underline">Users</nuxt-link>
             </div>
             <div>

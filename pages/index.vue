@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <div class="container mx-auto fader text-left">
+  <main class="container mx-auto fader text-left flex justify-between">
+    <!-- <div class="container mx-auto fader text-left">
       <div class="md:flex max-w-3xl">
         <div class="md:flex-shrink-0 mt-4 md:mt-0 md:ml-6">
           <img class="fade-in-left" src="https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95" alt="joy division">
@@ -12,13 +12,26 @@
           <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
         </div>
       </div>
-    </div>
+    </div> -->
+    <PostPreview 
+      id="1"
+      title="Piet Mondrian"
+      previewText="Know for being one of the pioneers of 20th-century abstract art, as he changed his artistic direction from figurative painting to an increasingly abstract style..."
+      thumbnail="~/assets/mondrian-1.png"/>
+    <PostPreview />
+    <PostPreview />
+
+     
+    
   </main>
 </template>
 
 <script>
+import PostPreview from '@/components/Posts/PostPreview'
+
 export default {
   components: {
+    PostPreview
   }
 }
 </script>
