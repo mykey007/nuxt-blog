@@ -1,12 +1,12 @@
 <template>
   <main>
-    <div class="container mx-auto">
+    <div class="container mx-auto fader">
       <div class="md:flex">
-        <div class="md:flex-shrink-0">
-          <img class="" src="https://generative-placeholders.glitch.me/image?width=400&height=400&style=mondrian" alt="joy division">
+        <div class="md:flex-shrink-0 mt-4 md:mt-0 md:ml-6">
+          <img class="fade-in-left" src="https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95" alt="joy division">
           
         </div>
-        <div class="fader mt-4 md:mt-0 md:ml-6">
+        <div class="mt-4 md:mt-0 md:ml-6">
           <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Post Punk</div>
           <nuxt-link to="/users" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Users</nuxt-link>
           <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
@@ -60,17 +60,15 @@ export default {
   padding-top: 15px;
 }
 
-.fader {
-  animation: 1s appear;
-  margin: auto;
+.fade-in-left {
+  position: relative;
+  animation: left-slide 1s;
+  animation-direction: normal;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+
+@keyframes left-slide {
+  0%  {left: -100px; opacity: 0.4;}
+  100% {left: 0px; opacity: 1;}
 }
 </style>

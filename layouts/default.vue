@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <nuxt />
+    <nuxt class="fader" />
   </div>
 </template>
 
@@ -53,7 +53,21 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+.fader {
+  animation: 1s appear;
+  margin: auto;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>
+
 <script>
 import Header from '~/components/Header.vue'
 export default {
