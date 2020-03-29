@@ -1,24 +1,24 @@
 <template>
-  <div class="container mx-auto">
-    <div class="md:flex">
-      <div class="md:flex-shrink-0">
-        <img class="rounded-lg md:w-56" src="https://generative-placeholders.glitch.me/image?width=600&height=300&style=joy-division" alt="joy division">
-        
-      </div>
-      <div class="mt-4 md:mt-0 md:ml-6">
-        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Post Punk</div>
-        <nuxt-link to="/users" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Users</nuxt-link>
-        <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+  <main>
+    <div class="container mx-auto">
+      <div class="md:flex">
+        <div class="md:flex-shrink-0">
+          <img class="w-2" src="https://generative-placeholders.glitch.me/image?width=600&height=300&style=joy-division" alt="joy division">
+          
+        </div>
+        <div class="fader mt-4 md:mt-0 md:ml-6">
+          <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Post Punk</div>
+          <nuxt-link to="/users" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Users</nuxt-link>
+          <p class="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-
 export default {
   components: {
-
   }
 }
 </script>
@@ -58,5 +58,19 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.fader {
+  animation: 1s appear;
+  margin: auto;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
