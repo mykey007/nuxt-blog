@@ -6,7 +6,7 @@
         nuxt-blog
       </h1>
       <h2 class="subtitle">
-        My super Nuxt.js project
+        My cereal Nuxt.js project
       </h2>
       <div class="links">
         <a
