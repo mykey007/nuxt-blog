@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto ">
         <form class="w-full max-w-sm">
         <img class="fade-in-top mb-6" src="https://generative-placeholders.glitch.me/image?width=600&height=300&style=triangles&gap=100">
         <div class="md:flex md:items-center mb-6">

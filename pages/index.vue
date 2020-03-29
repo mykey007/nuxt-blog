@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div class="container mx-auto fader">
-      <div class="md:flex">
+    <div class="container mx-auto fader text-left">
+      <div class="md:flex max-w-3xl">
         <div class="md:flex-shrink-0 mt-4 md:mt-0 md:ml-6">
           <img class="fade-in-left" src="https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95" alt="joy division">
           

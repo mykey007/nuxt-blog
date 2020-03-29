@@ -10,6 +10,7 @@
     </header> -->
 
     <div class="font-sans antialiased" id="app">
+        
         <nav class="flex items-center justify-between flex-wrap bg-indigo-600 p-6">
             <div class="flex items-center flex-no-shrink text-white mr-6">
             <img class="" src="https://generative-placeholders.glitch.me/image?width=56&height=56&style=mondrian">
