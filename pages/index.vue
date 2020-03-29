@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="md:flex">
         <div class="md:flex-shrink-0">
-          <img class="w-2" src="https://generative-placeholders.glitch.me/image?width=600&height=300&style=joy-division" alt="joy division">
+          <img class="" src="https://generative-placeholders.glitch.me/image?width=400&height=400&style=mondrian" alt="joy division">
           
         </div>
         <div class="fader mt-4 md:mt-0 md:ml-6">
