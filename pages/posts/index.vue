@@ -1,5 +1,6 @@
 <template>
   <main>
+    <PostList />
     <div class="container mx-auto">
       <div class="md:flex">
         <div class="md:flex-shrink-0">
@@ -15,3 +16,13 @@
     </div>
   </main>
 </template>
+
+<script>
+import PostList from '@/components/Posts/PostList'
+
+export default {
+  components: {
+    PostList
+  }
+}
+</script>
