@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="container mx-auto fader text-left flex flex-row justify-between content-start self-start">
         <PostPreview 
         id="1"
         title="Piet Mondrian"
