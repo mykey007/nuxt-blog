@@ -25,8 +25,10 @@
             <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="text-lg sm:flex-grow items-end flex flex-row justify-end">
                 <!-- <nuxt-link to="/" class="m-5 text-white hover:underline">Home</nuxt-link> -->
+                <nuxt-link to="/about" class="m-5 text-white hover:underline">About</nuxt-link>
                 <nuxt-link to="/posts" class="m-5 text-white hover:underline">Posts</nuxt-link>
                 <nuxt-link to="/users" class="m-5 text-white hover:underline">Users</nuxt-link>
+                <nuxt-link to="/admin" class="m-5 text-white hover:underline">Admin</nuxt-link>
             </div>
             <div>
                 <a href="#" class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-indigo-600 hover:bg-white mt-4 sm:mt-0">Lunch!</a>
