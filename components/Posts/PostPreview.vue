@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="'/posts' + id" class="max-w-sm rounded overflow-hidden shadow-lg">
+    <nuxt-link :to="postLink" class="max-w-sm rounded overflow-hidden shadow-lg">
         <img class="w-full" :src="thumbnail" alt="Sunset in the mountains">
         <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">{{ title }}</div>
@@ -26,6 +26,10 @@ previewText: Know for being one of the pioneers of 20th-century abstract art, as
             type: String,
             required: true
         },
+        isAdmin: {
+            type: Boolean,
+            required: true
+        },
         title : {
             type: String,
             required: true
@@ -41,6 +45,11 @@ previewText: Know for being one of the pioneers of 20th-century abstract art, as
         tags: {
             type: Array,
             required: false
+        }
+    },
+    computed: {
+        postLink() {
+            return this.isAdmin ? '/admin/' + this.id : '/posts/' + this.id
         }
     }
 }
