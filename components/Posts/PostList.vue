@@ -1,13 +1,20 @@
 <template>
     <section class="container mx-auto fader text-left flex flex-row justify-between content-start self-start">
         <PostPreview 
-        id="1"
-        :is-admin="isAdmin"
-        title="Piet Mondrian"
+          v-for="post in posts"
+          :key="post.id"
+          :id="post.id"
+          :is-admin="isAdmin"
+          :title="post.title"
+          :previewText="post.previewText"
+          :thumbnail="post.thumbnail"
+          v-bind:tags="post.tags"
+        />
+<!-- 
+  title="Piet Mondrian"
         previewText="Know for being one of the pioneers of 20th-century abstract art, as he changed his artistic direction from figurative painting to an increasingly abstract style..."
-        thumbnail="https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95"
+        :thumbnail="https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95"
         v-bind:tags="['#Dutch', '#Abstract', '#tableau']"/>
-
         <PostPreview 
         id="2"
         :is-admin="isAdmin"
@@ -22,7 +29,7 @@
         title="Max Ernst"
         previewText="Pioneer of the Dada movement and surrealism. He had no formal artistic training, but his experimental attitude toward the making of art resulted in his invention of frottage—a technique that uses pencil rubbings of objects as a source of images"
         thumbnail="https://upload.wikimedia.org/wikipedia/en/d/db/L%27Ange_du_Foyeur.jpg"
-        v-bind:tags="['#L\'Ange du Foyer', '#Dada']"/>
+        v-bind:tags="['#L\'Ange du Foyer', '#Dada']"/> -->
 
     </section>
 </template>
@@ -42,7 +49,11 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false
-    }
+    },
+  posts: {
+    type: Array,
+    required: true
+  }
   }
 }
 </script>
