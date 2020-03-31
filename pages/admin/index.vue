@@ -8,9 +8,9 @@
                         <div class="mt-0 mb-4 text-gray-600">
                             Say nice things about Admin.
                         </div> 
-                        <button @click="$router.push('/admin/new-post')" class="bg-yellow-400 hover:bg-yellow-300 text-grey-600 font-bold py-2 px-4 border-b-4 border-yellow-500 hover:border-yellow-400 rounded">
+                        <AppButton @click="$router.push('/admin/new-post')" class="bg-yellow-400 hover:bg-yellow-300 text-grey-600 font-bold py-2 px-4 border-b-4 border-yellow-500 hover:border-yellow-400 rounded">
                           Create Post
-                        </button>
+                        </AppButton>
                         <hr class="my-8 border-b-2 border-gray-200">
                     </div> 
                     <div class="flex">
@@ -29,10 +29,12 @@
 
 <script>
 import PostList from '@/components/Posts/PostList'
+import AppButton from '@/components/UI/AppButton'
 
 export default {
     components: {
-        PostList
+        PostList,
+        AppButton
     }
 }
 </script>
