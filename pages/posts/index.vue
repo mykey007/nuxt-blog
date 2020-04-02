@@ -1,6 +1,6 @@
 <template>
   <main>
-    <PostList />
+    <PostList :posts="loadedPosts"/>
     <div class="container mx-auto">
       <div class="md:flex">
         <div class="md:flex-shrink-0">
