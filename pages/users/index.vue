@@ -1,4 +1,4 @@
 <template>
-    <p>Please enter an ID</p>
+    <p class="lh-5">Please enter an ID</p>
 </template>
 

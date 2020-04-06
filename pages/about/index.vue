@@ -12,8 +12,8 @@
                     </div> 
                     <div class="flex">
                         <div class="px-6 xl:px-12 w-full max-w-3xl mx-auto lg:ml-0 lg:mr-auto xl:mx-0 xl:w-3/4 text-gray-600">
-                            <p>Tailwind doesn't include pre-designed card components out of the box, but they're easy to build using existing utilities.</p> 
-                            <p>DIY design on steroids 💉💉💉</p> 
+                            <p class="lh-5">Tailwind doesn't include pre-designed card components out of the box, but they're easy to build using existing utilities.</p> 
+                            <p class="lh-5">DIY design on steroids 💉💉💉</p> 
                             
                         </div> 
                     </div>

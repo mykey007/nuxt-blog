@@ -17,7 +17,7 @@
                         <div class="px-6 xl:px-12 w-full max-w-3xl mx-auto lg:ml-0 lg:mr-auto xl:mx-0 xl:w-3/4 text-gray-600">
                             <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">Existing Posts</p>
                             <PostList isAdmin />
-                            <p>Tom Nook was Here 💰💰💰</p> 
+                            <p class="lh-5">Tom Nook was Here 💰💰💰</p> 
                             
                         </div> 
                     </div>
