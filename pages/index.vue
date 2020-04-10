@@ -17,12 +17,6 @@ export default {
     // if (context.store.state.loadedPosts.length > 0) {
     //   return null;
     // }
-    .then(data => {
-      context.store.commit('setPosts', data.loadedPosts)
-    })
-    .catch(e => {
-      context.error(new Error());
-    })
   },
   created() {
     this.$store.dispatch('setPosts', this.loadedPosts)

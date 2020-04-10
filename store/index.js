@@ -40,7 +40,13 @@ const createStore = () => {
                         ]
                       })
                   }, 1000)
-                  }) 
+                  })
+                  .then(data => {
+                    context.store.commit('setPosts', data.loadedPosts)
+                  })
+                  .catch(e => {
+                    context.error(new Error());
+                  })
             },
             setPosts(vuexContext, posts) {
                 vuexContext.commit('setPosts', posts)
