@@ -12,18 +12,20 @@ export default {
   components: {
     PostList
   },
-  fetch(context) {
-    // Dont do it everywhere, refer to index.js in store
-    // if (context.store.state.loadedPosts.length > 0) {
-    //   return null;
-    // }
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   },
-  created() {
-    this.$store.dispatch('setPosts', this.loadedPosts)
-  },
-  data() {
-    return {}
-  }
+  // fetch(context) {
+  //   // Dont do it everywhere, refer to index.js in store
+  //   // if (context.store.state.loadedPosts.length > 0) {
+  //   //   return null;
+  //   // }
+  // },
+  // data() {
+  //   return {}
+  // }
 }
 </script>
 <style>
