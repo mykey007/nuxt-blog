@@ -16,16 +16,7 @@ export default {
     loadedPosts() {
       return this.$store.getters.loadedPosts
     }
-  },
-  // fetch(context) {
-  //   // Dont do it everywhere, refer to index.js in store
-  //   // if (context.store.state.loadedPosts.length > 0) {
-  //   //   return null;
-  //   // }
-  // },
-  // data() {
-  //   return {}
-  // }
+  }
 }
 </script>
 <style>
