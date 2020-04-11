@@ -16,22 +16,19 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-    asyncData(context, callback) {
-        setTimeout(() => {
-            callback(null, {
-                loadedPost: {
-                    id: '1',
-                    title: "Piet Mondrian",
-                    altTitle: "First Post (ID: " + context.params.id + ")",
-                    previewText: "Know for being one of the pioneers of 20th-century abstract art, as he changed his artistic direction from figurative painting to an increasingly abstract style...",
-                    author: 'Delcos Famous Mac and Cheese',
-                    updatedDate: new Date(),
-                    thumbnail: "https://generative-placeholders.glitch.me/image?width=200&height=200&style=mondrian&colors=95",
-                    tags: ['#Dutch', '#Abstract', '#tableau']
-                }
-            })
-        }, 1000)
+    asyncData(context) {
+        return axios.get('https://cms-vue-c85dd.firebaseio.com/posts/' + context.params.id + '.json')
+        .then(res => {
+          return {
+            loadedPost: res.data
+          }
+        })
+        .catch(e => {
+          return context.error(e)
+        })
     },
 }
 </script>

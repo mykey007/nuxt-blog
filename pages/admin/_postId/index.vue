@@ -1,7 +1,7 @@
 <template>
     <div class="admin-post-page">
         <section class="update-form">
-            <AdminPostForm :post="loadedPost" />
+            <AdminPostForm :post="loadedPost" @submit="onSubmitted" />
         </section>
     </div>
 </template>
@@ -14,14 +14,25 @@ export default {
     components: {
         AdminPostForm
     },
-    data() {
-        return {
-            loadedPost: {
-                author: 'Mac and Cheese',
-                title: 'Mac\'s Famous Mac &amp; Cheese',
-                content: 'Super delicious',
-                thumbnailLink: 'https://i.ytimg.com/vi/JxzIF3cW3GU/maxresdefault.jpg'
-            }
+    asyncData(context) {
+        return axios.get('https://cms-vue-c85dd.firebaseio.com/posts/' + context.params.id + '.json')
+        .then(res => {
+          return {
+            loadedPost: res.data
+          }
+        })
+        .catch(e => {
+          return context.error(e)
+        })
+    },
+    methods: {
+        onSubmitted(editedPost) {
+            axios.put('https://cms-vue-c85dd.firebaseio.com/posts/' + this.$route.params.id + '.json', editedPost)
+            .then(res => {
+                this.$router.push('/admin')
+                console.log(res)
+            })
+            .catch(e => console.log(e))
         }
     }
 }
