@@ -55,11 +55,6 @@ const createStore = () => {
             loadedPosts(state) {
                 return state.loadedPosts
             }
-        },
-        computed: {
-            loadedPosts() {
-                return this.$store.getters.loadedPosts
-            }
         }
     })
 }
