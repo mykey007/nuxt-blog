@@ -54,5 +54,18 @@ export default {
   },
   env: {
     baseUrl: process.env.BASE_URL || "https://cms-vue-c85dd.firebaseio.com"
+  },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    },
+    linkActiveClass: 'active',
+    transition: {
+      name: 'fade', 
+      mode: 'out-in',
+    }
   }
 }
