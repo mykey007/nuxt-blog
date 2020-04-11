@@ -30,6 +30,9 @@ export default {
           return context.error(e)
         })
     },
+    head: {
+      title: 'yyyy'
+    }
 }
 </script>
 

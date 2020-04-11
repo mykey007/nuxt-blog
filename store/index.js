@@ -22,7 +22,8 @@ const createStore = () => {
         },
         actions: {
             nuxtServerInit(vuexContext, context) {
-                return  axios.get('https://cms-vue-c85dd.firebaseio.com/posts.json')
+                return  axios
+                .get(process.env.baseUrl + '/posts.json')
                 .then(res => {
                     const postsArray = []
                     for (const key in res.data) {
@@ -68,7 +69,7 @@ const createStore = () => {
             },
             addPost(vuexContext, post) {
                 const createdPost = {...post, updatedDate: new Date()}
-                axios.post('https://cms-vue-c85dd.firebaseio.com/posts.json', createdPost)
+                axios.post(process.env.baseUrl + '/posts.json', createdPost)
                     .then(result => {
                         vuexContext.commit('addPost', {...createdPost, id: result.data.name})
                         this.$router.push('/admin')
@@ -78,7 +79,7 @@ const createStore = () => {
                     .catch(e => console.log(e))
             },
             editPost(vuexContext, editedPost) {
-                return axios.put('https://cms-vue-c85dd.firebaseio.com/posts/' + editedPost.id + '.json', editedPost)
+                return axios.put(process.env.baseUrl + '/posts/' + editedPost.id + '.json', editedPost)
                     .then(res => {
                         vuexContext.commit('editPost', editedPost)
                         console.log(res)

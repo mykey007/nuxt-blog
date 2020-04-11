@@ -18,11 +18,12 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#272c5e', height: '6px', duration: 4000 },
   /*
   ** Global CSS
   */
   css: [
+    '~assets/css/tailwind.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -50,5 +51,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    baseUrl: process.env.BASE_URL || "https://cms-vue-c85dd.firebaseio.com"
   }
 }
