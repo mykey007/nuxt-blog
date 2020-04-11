@@ -17,13 +17,9 @@ export default {
     },
     methods: {
         onSubmitted(postData) {
-            axios.post('https://cms-vue-c85dd.firebaseio.com/posts.json', {...postData, updatedDate: new Date()})
-            .then(result => {
-                this.$router.push('/admin')
-                console.log(res)
-                console.log(result)
+            this.$store.dispatch("addPost", postData).then(() => {
+                this.$router.push("/admin");
             })
-            .catch(e => console.log(e))
         }
     } 
 }

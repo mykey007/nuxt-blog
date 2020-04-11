@@ -18,7 +18,7 @@ export default {
         return axios.get('https://cms-vue-c85dd.firebaseio.com/posts/' + context.params.id + '.json')
         .then(res => {
           return {
-            loadedPost: res.data
+            loadedPost: {...res.data, id: context.params.postId}
           }
         })
         .catch(e => {
@@ -27,12 +27,9 @@ export default {
     },
     methods: {
         onSubmitted(editedPost) {
-            axios.put('https://cms-vue-c85dd.firebaseio.com/posts/' + this.$route.params.id + '.json', editedPost)
-            .then(res => {
-                this.$router.push('/admin')
-                console.log(res)
+            this.$store.dispatch("editPost", editedPost).then(() => {
+                this.$router.push("/admin");
             })
-            .catch(e => console.log(e))
         }
     }
 }

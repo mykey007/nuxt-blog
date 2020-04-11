@@ -9,6 +9,15 @@ const createStore = () => {
         mutations: {
             setPosts(state, posts) {
                 state.loadedPosts = posts
+            },
+            addPost(state, post) {
+                state.loadedPosts.push(post)
+            },
+            editPost(state, editedPost) {
+                const postIndex = state.loadedPosts.findIndex(
+                    post => post.id === editedPost.id
+                );
+                state.loadedPosts[postIndex] = editedPost
             }
         },
         actions: {
@@ -56,6 +65,25 @@ const createStore = () => {
                 //   .catch(e => {
                 //     context.error(new Error());
                 //   })
+            },
+            addPost(vuexContext, post) {
+                const createdPost = {...post, updatedDate: new Date()}
+                axios.post('https://cms-vue-c85dd.firebaseio.com/posts.json', createdPost)
+                    .then(result => {
+                        vuexContext.commit('addPost', {...createdPost, id: result.data.name})
+                        this.$router.push('/admin')
+                        console.log(res)
+                        console.log(result)
+                    })
+                    .catch(e => console.log(e))
+            },
+            editPost(vuexContext, editedPost) {
+                return axios.put('https://cms-vue-c85dd.firebaseio.com/posts/' + editedPost.id + '.json', editedPost)
+                    .then(res => {
+                        vuexContext.commit('editPost', editedPost)
+                        console.log(res)
+                    })
+                    .catch(e => console.log(e))
             },
             setPosts(vuexContext, posts) {
                 vuexContext.commit('setPosts', posts)
