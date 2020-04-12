@@ -1,16 +1,16 @@
 <template>
-    <form class="w-full max-w-xl" @submit.prevent="onSave">
+    <form class="w-full max-w-lg  my-auto mx-auto" @submit.prevent="onSave">
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
-                <AppControlInput class="bg-gray-200 block uppercase tracking-wide text-gray-700 text-xs font-bold py-4 px-4" for="grid-password" v-model="editedPost.author">Author Name</AppControlInput>
-                <AppControlInput class="bg-gray-200 block uppercase tracking-wide text-gray-700 text-xs font-bold py-4 px-4" v-model="editedPost.title">Title</AppControlInput>
-                <AppControlInput class="bg-gray-200 block uppercase tracking-wide text-gray-700 text-xs font-bold py-4 px-4" v-model="editedPost.thumbnail">Thumbnail Link</AppControlInput>
+                <AppControlInput v-model="editedPost.author">Author Name</AppControlInput>
+                <AppControlInput v-model="editedPost.title">Title</AppControlInput>
+                <AppControlInput v-model="editedPost.thumbnail">Thumbnail Link</AppControlInput>
                 <AppControlInput
-                    class="bg-gray-200 block uppercase tracking-wide text-gray-700 text-xs font-bold py-4 px-4" 
+                    
                     control-type="textarea"
                     v-model="editedPost.content">Content</AppControlInput>
                     <AppControlInput
-                    class="bg-gray-200 block uppercase tracking-wide text-gray-700 text-xs font-bold py-4 px-4" 
+                    
                     control-type="textarea"
                     v-model="editedPost.previewText">Preview Text</AppControlInput>
                 <AppButton type="submit">Save</AppButton>
@@ -67,8 +67,5 @@ export default {
 </script>
 
 <style scoped>
-    .new-post-form label,
-    .new-post-form input {
-        display: block !important;
-    }
+    
 </style>

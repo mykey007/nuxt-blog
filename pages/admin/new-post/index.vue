@@ -1,5 +1,5 @@
 <template>
-    <div class="admin-new-post-page container page-content">
+    <div class="admin-new-post-page page-content">
         <section class="new-post-form">
             <AdminPostForm @submit="onSubmitted" />
         </section>
@@ -26,9 +26,5 @@ export default {
 </script>
 
 <style>
-    .admin-new-post-page {
-        margin: 0 auto;
-        max-width: 1200px;
-        min-width: 1200px;
-    }
+
 </style>
